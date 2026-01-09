@@ -1,27 +1,83 @@
-# PTJ Energie Verde (UAT) — PV + Stocare, implementare “audit-friendly”
-**ElectroVerde** | Focus: **Prahova** → apoi **Galați / Dolj**
+# RAPID ENERGY ASSESSMENT (REA) — Checklist (UAT • PTJ Energie Verde)
+**Scop:** date minime ca ElectroVerde să livreze în **5 zile**: *2 scenarii tehnice + buget orientativ + riscuri + pași următori.*
 
-## Ce facem
-Livrăm **proiectare + execuție (EPC)** pentru **fotovoltaic de autoconsum** și **stocare**, cu documentații, recepții și monitorizare potrivite pentru proiecte publice.
+---
 
-## Pentru cine
-**UAT-uri eligibile PTJ** (investiții în surse regenerabile + stocare, inclusiv în perspectiva comunităților de energie).
+## A. Date UAT & contact (obligatoriu)
+- **UAT / Localitate:** ______________________________
+- **Județ:** ______________________________
+- **Persoană contact (nume + funcție):** ______________________________
+- **Telefon / Email:** ______________________________
+- **Persoană tehnică (admin clădiri / întreținere):** ______________________________
 
-## 3 pachete (decizie rapidă)
-- **PV-Only** (clădiri publice) — dimensionare + execuție + punere în funcțiune
-- **PV + Stocare** — baterii + EMS + monitorizare + rapoarte
-- **Community-Ready** — pregătire scalare + monitorizare/contorizare pentru extindere
+---
 
-## Rapid Energy Assessment (REA) — 5 zile
-Primești: **2 scenarii (minim/optim)** + **buget orientativ** + **timeline** + **riscuri**  
-Pe baza: **Checklist REA (1 pagină)** + poze + consum (dacă există)
+## B. Clădiri vizate (minim 2–3)
+> Completați pentru fiecare clădire (duplicați blocul).
 
-## Important (curat la audit)
-- **Solicitantul este UAT-ul** (ElectroVerde nu depune ca beneficiar).
-- Nu “aranjăm” caiete de sarcini; oferim **note tehnice generale** și estimări orientative.
+### Clădire #1
+- **Denumire:** ______________________________
+- **Adresă:** ______________________________
+- **Tip:** ☐ școală ☐ liceu ☐ primărie ☐ dispensar ☐ sală sport ☐ cămin cultural ☐ alt: ______
+- **An construcție (dacă se știe):** ______  | **Nr. niveluri:** ______
+- **Acoperiș:** ☐ șarpantă ☐ terasă ☐ mixt  | **Material:** ☐ tablă ☐ țiglă ☐ membrană ☐ alt: ____
+- **Suprafață disponibilă aprox. (m²):** ______
+- **Restricții/umbre:** ☐ coșuri ☐ lucarne ☐ umbre ☐ paratrăsnet ☐ zonă protejată ☐ nu știm
 
-## Next step
-Trimiteți **Checklist REA** → call 15 min → REA în 5 zile.
+### Clădire #2
+- (repetați câmpurile)
 
-**Contact:** [Nume] | [Telefon] | [Email]  
-**Landing:** electroverde.ro/ptj
+### Clădire #3
+- (repetați câmpurile)
+
+---
+
+## C. Consum energie (ideal: 12 luni)
+Bifați ce puteți furniza:
+- ☐ **Facturi energie electrică** pe ultimele 12 luni
+- ☐ **Consum lunar (kWh/lună)** / **total anual (kWh/an):** __________________
+- ☐ **Putere contractată/aprobată (kW):** __________________
+- ☐ **Profil consum:** ☐ predominant zi ☐ predominant seară ☐ mixt ☐ necunoscut
+- ☐ **Consumatori mari** (pompe, HVAC, servere, bucătărie etc.): __________________
+
+---
+
+## D. Date de racordare (dacă există)
+- **Distribuitor:** __________________
+- **Contor:** ☐ monofazat ☐ trifazat ☐ necunoscut
+- **Tensiune:** ☐ JT ☐ MT ☐ necunoscut
+- **Loc BMP/PM (aprox.):** __________________
+- **Distanță până la tabloul general:** ______ m
+- Documente: ☐ ATR ☐ contract furnizare ☐ schemă electrică ☐ nu avem
+
+---
+
+## E. Spațiu echipamente / baterie
+- **Cameră tehnică:** ☐ da ☐ nu
+- **Loc posibil:** ☐ interior ☐ exterior ☐ container ☐ alt: ______
+- Constrângeri: ☐ acces limitat ☐ temperatură ☐ umiditate ☐ securitate ☐ necunoscut
+- **Stocare dorită:** ☐ da ☐ nu ☐ analizăm scenarii
+
+---
+
+## F. Foto & acces (recomandat)
+- ☐ 6–10 poze acoperiș (din colțuri diferite)
+- ☐ poze tablouri electrice + BMP/contor
+- ☐ schiță simplă (poziționare clădire + acces)
+- **Program acces:** ______________________________
+
+---
+
+## G. Obiectiv & preferințe
+- **Obiectiv:** ☐ reducere facturi ☐ autoconsum maxim ☐ reziliență ☐ comunitate energie
+- **Prioritate:** ☐ implementare rapidă ☐ cost minim ☐ performanță maximă ☐ mix
+- **Termen intern dorit:** ______________________________
+
+---
+
+## H. Confirmare
+☐ Confirmăm că datele sunt orientative și permitem utilizarea lor pentru REA.
+
+**Semnătură / Nume / Funcție:** _____________________  **Data:** ____/____/2026
+
+**Contact ElectroVerde:** [Nume] • [Telefon] • [Email] • electroverde.ro/ptj
