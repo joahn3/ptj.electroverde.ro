@@ -9,21 +9,14 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b1220" />
 
-  <!-- ✅ PRODUCTION TODO: set canonical to the final public URL -->
-  <!-- <link rel="canonical" href="https://electroverde.ro/ptj/" /> -->
-
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Open Graph / Social -->
   <meta property="og:title" content="Programul Tranziție Justă (PTJ) – Energie verde pentru UAT | ElectroVerde" />
   <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Evaluare tehnică rapidă (REA) în 5 zile. Zone: Gorj, Hunedoara, Valea Jiului, Dolj, Galați, Prahova, Mureș." />
   <meta property="og:type" content="website" />
-  <!-- ✅ PRODUCTION TODO -->
-  <!-- <meta property="og:url" content="https://electroverde.ro/ptj/" /> -->
-  <!-- <meta property="og:image" content="https://electroverde.ro/assets/og-ptj.jpg" /> -->
+  
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -237,6 +230,8 @@
     /* Form */
     form{margin-top:10px}
     label{display:block; font-weight:900; margin:10px 0 6px}
+    
+    /* ✅ FIX: iOS Input Styles Reset */
     input, textarea, select{
       width:100%;
       padding:12px 12px;
@@ -246,6 +241,8 @@
       color:var(--text);
       outline:none;
       min-height:44px;
+      -webkit-appearance: none; /* Elimina stilul nativ iOS */
+      appearance: none;
     }
     textarea{min-height:110px; resize:vertical}
 
@@ -259,7 +256,14 @@
       border:1px solid var(--border);
       background:rgba(0,0,0,.10);
     }
-    .consent input{min-height:auto; width:auto; margin-top:3px}
+    /* ✅ FIX: Restore Checkbox Style */
+    .consent input{
+      min-height:auto; 
+      width:auto; 
+      margin-top:3px;
+      -webkit-appearance: checkbox;
+      appearance: auto;
+    }
     .consent .muted{font-size:12px; line-height:1.4}
 
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible{
@@ -340,7 +344,6 @@
     </header>
 
     <main id="content">
-      <!-- HERO -->
       <section class="hero" aria-label="Introducere">
         <div class="card heroMain">
           <div class="kicker">
@@ -438,7 +441,6 @@
         </aside>
       </section>
 
-      <!-- PROJECT TYPE -->
       <section class="section card sectionCard" id="proiect-tip" aria-label="Proiect tip">
         <h2>Proiect tip: 3 clădiri publice (2 scenarii orientative)</h2>
         <p class="muted" style="margin:0 0 12px">
@@ -472,7 +474,6 @@
         </div>
       </section>
 
-      <!-- PROCESS + FAQ -->
       <section class="section twoCol" id="proces" aria-label="Proces și întrebări frecvente">
         <div class="card sectionCard">
           <h2>Pași de lucru (clar, trasabil, orientat pe conformitate)</h2>
@@ -533,7 +534,6 @@
         </div>
       </section>
 
-      <!-- DOWNLOADS -->
       <section class="section card sectionCard" id="downloads" aria-label="Resurse PDF">
         <h2>Resurse rapide (PDF)</h2>
         <p class="muted" style="margin:0 0 12px">
@@ -541,7 +541,6 @@
         </p>
 
         <div class="ctaRow">
-          <!-- ✅ PRODUCTION TODO: upload real PDFs to /assets/ -->
           <a class="btn btnGhost" href="/assets/electroverde-ptj-one-pager.pdf" download>Descarcă One-Pager (PDF)</a>
           <a class="btn btnGhost" href="/assets/electroverde-ptj-checklist-rea.pdf" download>Descarcă Checklist REA (PDF)</a>
           <a class="btn btnSecondary" href="/ghid-uat/">Ghid UAT (detalii apel)</a>
@@ -552,7 +551,6 @@
         </div>
       </section>
 
-      <!-- CONTACT / FORM -->
       <section class="section twoCol" aria-label="Contact și formular">
         <div class="card sectionCard">
           <h2>Date necesare (minim) pentru REA</h2>
@@ -567,7 +565,6 @@
 
           <h2>Contact</h2>
           <div class="muted">
-            <!-- ✅ PRODUCTION TODO: replace placeholders -->
             <b>[Nume]</b> – [Funcție]<br/>
             Tel: <a href="tel:+40XXXXXXXXX"><b>[+40 xxx xxx xxx]</b></a><br/>
             Email: <a href="mailto:contact@electroverde.ro"><b>contact@electroverde.ro</b></a>
@@ -588,7 +585,6 @@
           <h2 style="margin:0 0 6px">Solicită Evaluare Tehnică Rapidă (REA)</h2>
           <div class="muted">Completați datele de bază (aprox. 2 minute). Revenim cu pașii propuși și un apel scurt de clarificare (aprox. 15 minute).</div>
 
-          <!-- NETLIFY FORMS (production-ready) -->
           <form id="leadForm"
                 name="ptj-leads"
                 method="POST"
@@ -672,7 +668,6 @@
     </main>
   </div>
 
-  <!-- Sticky CTA for mobile -->
   <div class="stickyCta" aria-hidden="false">
     <div class="inner">
       <div class="txt">REA în 5 zile • zone eligibile • prioritate Prahova</div>
@@ -682,33 +677,32 @@
   </div>
 
   <script>
-    // Validare minimă pentru o experiență predictibilă (fără dependențe externe)
     const form = document.getElementById('leadForm');
-    form.addEventListener('submit', (e) => {
-      const required = form.querySelectorAll('[required]');
-      for (const el of required) {
-        if (el.type === 'checkbox') {
-          if (!el.checked) {
-            e.preventDefault();
-            alert('Vă rugăm să bifați consimțământul pentru a putea fi contactat(ă).');
-            return;
-          }
-        } else {
-          if (!el.value || !el.value.trim()) {
-            e.preventDefault();
-            alert('Vă rugăm să completați câmpurile obligatorii (UAT, județ/zonă, persoană de contact, email, telefon).');
-            return;
-          }
-        }
-      }
 
-      const email = document.getElementById('email');
-      if (email && !email.checkValidity()) {
-        e.preventDefault();
-        alert('Vă rugăm să introduceți un email valid.');
-        return;
-      }
-    });
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        // Validare custom pentru checkbox (Consimțământ)
+        const consent = document.getElementById('consent');
+        if (consent && !consent.checked) {
+          e.preventDefault();
+          // Mesaj custom care apare ca tooltip nativ
+          consent.setCustomValidity('Vă rugăm să bifați consimțământul pentru a putea fi contactat(ă).');
+          consent.reportValidity();
+          
+          // Resetăm eroarea imediat ce utilizatorul interacționează
+          consent.addEventListener('change', () => consent.setCustomValidity(''), {once: true});
+          return;
+        }
+
+        // Verificăm restul formularului folosind API-ul nativ
+        if (!form.checkValidity()) {
+          // Browserul va afișa automat erorile standard HTML5
+          // Nu blocăm submit-ul manual aici, lăsăm browserul să o facă
+          return;
+        }
+        // Dacă ajungem aici, formularul se trimite (POST către Netlify)
+      });
+    }
   </script>
 </body>
 </html>
