@@ -1,1 +1,180 @@
-a
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Mulțumim! | ElectroVerde – PTJ Energie Verde</title>
+  <meta name="description" content="Am primit solicitarea pentru Rapid Energy Assessment (REA). Revenim în scurt timp cu pașii următori." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --muted:#9fb0d0;
+      --text:#e7eefc;
+      --accent:#22c55e;
+      --accent2:#38bdf8;
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 10px 28px rgba(0,0,0,.32);
+      --radius:16px;
+      --pad: clamp(16px, 3.2vw, 28px);
+      --h1: clamp(26px, 4.6vw, 40px);
+      --p:  clamp(15px, 2.2vw, 16px);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 18% -10%, rgba(34,197,94,.25), transparent 60%),
+        radial-gradient(900px 500px at 85% 0%, rgba(56,189,248,.20), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      font-size: var(--p);
+      -webkit-font-smoothing: antialiased;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px; margin:0 auto; padding: 22px var(--pad) 72px}
+    .card{
+      margin-top: 18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding: var(--pad);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:950; letter-spacing:.2px;
+      opacity:.95;
+    }
+    .dot{
+      width:12px;height:12px;border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(34,197,94,.15)
+    }
+    h1{margin:12px 0 10px; font-size: var(--h1); line-height:1.12}
+    .muted{color:var(--muted)}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      border:0; cursor:pointer; text-decoration:none;
+      border-radius:12px; padding:12px 14px;
+      font-weight:900;
+      min-height:44px;
+      user-select:none;
+      transition: transform .05s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btnPrimary{
+      background:linear-gradient(90deg, var(--accent), #16a34a);
+      color:#06101b;
+    }
+    .btnGhost{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      border-radius:999px;
+      text-decoration:none;
+      opacity:.95;
+      font-weight:800;
+      font-size: 13px;
+    }
+    .check{
+      width:48px; height:48px; border-radius:14px;
+      display:grid; place-items:center;
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.35);
+      color:#b7f7cc;
+      font-weight:950;
+      margin-top: 6px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top: 14px;
+    }
+    .mini{
+      padding:14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.14);
+    }
+    .foot{
+      margin-top:18px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+      color:rgba(255,255,255,.58);
+      font-size:12px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns: 1fr}
+    }
+    a:focus-visible{
+      outline:3px solid rgba(56,189,248,.55);
+      outline-offset:2px;
+      border-radius:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      ElectroVerde <span class="muted" style="font-weight:800">| PTJ Energie Verde</span>
+    </div>
+
+    <main class="card" aria-label="Confirmare trimitere">
+      <div class="check" aria-hidden="true">✓</div>
+      <h1>Mulțumim! Am primit solicitarea ✅</h1>
+      <p class="muted" style="margin:0">
+        Revenim cu pașii următori și programăm un call scurt (15 minute).
+        Ținta noastră pentru livrarea <b>Rapid Energy Assessment (REA)</b> este <b>5 zile</b> de la primirea datelor minime.
+      </p>
+
+      <div class="grid" aria-label="Ce urmează">
+        <div class="mini">
+          <div class="pill">Pasul 1</div>
+          <p style="margin:10px 0 0" class="muted">
+            Dacă nu ați atașat încă poze / consum, le puteți trimite pe email, menționând UAT-ul și clădirile vizate.
+          </p>
+        </div>
+        <div class="mini">
+          <div class="pill">Pasul 2</div>
+          <p style="margin:10px 0 0" class="muted">
+            Primim confirmarea, apoi vă trimitem 2 scenarii (minim/optim) + buget orientativ + riscuri + timeline.
+          </p>
+        </div>
+      </div>
+
+      <div class="ctaRow" aria-label="Acțiuni">
+        <a class="btn btnPrimary" href="/ptj/#downloads">Descarcă One-Pager & Checklist</a>
+        <a class="btn btnGhost" href="/ptj/">Înapoi la pagina PTJ</a>
+      </div>
+
+      <div class="foot">
+        © ElectroVerde • PV + stocare • Documentații & recepții • 2026
+      </div>
+    </main>
+  </div>
+
+  <!-- Optional: track conversion -->
+  <!--
+  <script>
+    // Example: analytics event
+    // window.dataLayer = window.dataLayer || [];
+    // window.dataLayer.push({ event: 'ptj_lead_submitted' });
+  </script>
+  -->
+</body>
+</html>
