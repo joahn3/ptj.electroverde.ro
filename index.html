@@ -2,13 +2,29 @@
 <html lang="ro">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PTJ Energie Verde pentru UAT-uri | ElectroVerde – PV + Stocare + Implementare</title>
-  <meta name="description" content="ElectroVerde sprijină UAT-urile eligibile PTJ cu pachete tehnice și implementare EPC: fotovoltaic pentru autoconsum + stocare + monitorizare. Prahova prioritar, apoi Galați/Dolj." />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>PTJ Energie Verde (UAT) | ElectroVerde – PV + Stocare + Implementare</title>
+  <meta name="description" content="ElectroVerde sprijină UAT-urile eligibile PTJ cu pachete tehnice și implementare EPC: fotovoltaic pentru autoconsum + stocare + monitorizare. Focus: Prahova, apoi Galați/Dolj." />
   <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1220" />
+
   <meta property="og:title" content="PTJ Energie Verde (UAT) – ElectroVerde" />
   <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Pachete standard + Rapid Energy Assessment în 5 zile." />
   <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"PTJ Energie Verde (UAT) | ElectroVerde",
+    "description":"Implementare audit-friendly pentru proiecte PTJ: PV pentru autoconsum + stocare + monitorizare.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"ElectroVerde",
+      "url":"https://electroverde.ro"
+    }
+  }
+  </script>
 
   <style>
     :root{
@@ -18,91 +34,148 @@
       --text:#e7eefc;
       --accent:#22c55e;
       --accent2:#38bdf8;
-      --border:rgba(255,255,255,.10);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 10px 28px rgba(0,0,0,.32);
       --radius:16px;
+
+      --pad: clamp(16px, 3.2vw, 28px);
+      --h1: clamp(26px, 4.6vw, 40px);
+      --h2: clamp(18px, 2.8vw, 24px);
+      --p:  clamp(15px, 2.2vw, 16px);
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(34,197,94,.25), transparent 60%),
-                  radial-gradient(900px 500px at 80% 0%, rgba(56,189,248,.20), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(1200px 600px at 18% -10%, rgba(34,197,94,.25), transparent 60%),
+        radial-gradient(900px 500px at 85% 0%, rgba(56,189,248,.20), transparent 55%),
+        var(--bg);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.55;
+      font-size: var(--p);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+
     a{color:inherit}
-    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 80px}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 0 22px;
+    .wrap{max-width:1100px; margin:0 auto; padding: 18px var(--pad) 72px}
+
+    /* Skip link for keyboard users */
+    .skip{
+      position:absolute; left:-999px; top:10px;
+      background:#000; color:#fff; padding:10px 12px;
+      border-radius:10px; z-index:9999;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
-    .dot{width:12px;height:12px;border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px rgba(34,197,94,.15)}
-    .nav a{opacity:.9; text-decoration:none}
+    .skip:focus{left:14px}
+
+    header.nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 0 18px;
+      flex-wrap:wrap;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px}
+    .dot{
+      width:12px;height:12px;border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(34,197,94,.15)
+    }
+    .navlinks{display:flex; gap:10px; flex-wrap:wrap}
     .pill{
       display:inline-flex; align-items:center; gap:8px;
-      padding:10px 14px; border:1px solid var(--border);
-      background:rgba(255,255,255,.04); border-radius:999px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      border-radius:999px;
       text-decoration:none;
+      opacity:.95;
     }
-    .hero{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
-      align-items:stretch;
-      margin-top:6px;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    .pill:active{transform:translateY(1px)}
+
+    main .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
-    .heroMain{padding:24px}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+      align-items:stretch;
+      margin-top:6px;
+    }
+    .heroMain{padding: var(--pad)}
     .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      color:var(--muted); font-weight:600; font-size:14px;
+      display:flex; gap:10px; align-items:center;
+      color:var(--muted); font-weight:700; font-size:14px;
+      flex-wrap:wrap;
     }
     .badge{
       padding:6px 10px; border-radius:999px;
-      background:rgba(34,197,94,.16); border:1px solid rgba(34,197,94,.35);
-      color:#b7f7cc; font-weight:700;
+      background:rgba(34,197,94,.16);
+      border:1px solid rgba(34,197,94,.36);
+      color:#b7f7cc; font-weight:900;
     }
-    h1{margin:12px 0 10px; font-size:34px; line-height:1.15}
-    .sub{color:var(--muted); margin:0 0 18px}
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    button,.btn{
-      border:0; cursor:pointer;
+    h1{margin:12px 0 10px; font-size: var(--h1); line-height:1.12}
+    h2{margin:0 0 10px; font-size: var(--h2); line-height:1.2}
+    .sub{color:var(--muted); margin:0 0 14px}
+
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      border:0; cursor:pointer; text-decoration:none;
       border-radius:12px; padding:12px 14px;
-      font-weight:800;
+      font-weight:900;
+      min-height:44px; /* tap-friendly */
+      user-select:none;
+      transition: transform .05s ease;
     }
+    .btn:active{transform:translateY(1px)}
     .btnPrimary{
       background:linear-gradient(90deg, var(--accent), #16a34a);
       color:#06101b;
     }
     .btnGhost{
-      background:rgba(255,255,255,.05);
+      background:rgba(255,255,255,.06);
       border:1px solid var(--border);
       color:var(--text);
-      text-decoration:none;
     }
-    .heroSide{padding:18px}
-    .sideTitle{font-weight:900; margin:0 0 10px}
-    .list{margin:0; padding:0 0 0 18px; color:var(--muted)}
-    .grid{
+    .btnSecondary{
+      background:rgba(56,189,248,.12);
+      border:1px solid rgba(56,189,248,.35);
+      color:#cfefff;
+    }
+
+    .grid3{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:14px;
+      gap:12px;
       margin-top:14px;
     }
     .box{padding:16px}
     .box h3{margin:0 0 6px; font-size:16px}
     .box p{margin:0; color:var(--muted); font-size:14px}
-    .section{margin-top:22px}
-    .section h2{font-size:22px; margin:0 0 10px}
+
+    .side{padding:18px}
+    .sideTitle{font-weight:950; margin:0 0 10px}
+    .list{margin:0; padding:0 0 0 18px; color:var(--muted)}
+    .note{
+      margin-top:14px; padding:12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(34,197,94,.08);
+    }
+
+    .section{margin-top:18px}
+    .sectionCard{padding: var(--pad)}
     .muted{color:var(--muted)}
-    .twoCol{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-    .steps{counter-reset: step}
+    .twoCol{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+
+    .steps{display:grid; gap:12px}
     .step{
       padding:16px;
       display:flex; gap:12px;
@@ -110,15 +183,15 @@
     }
     .num{
       flex:0 0 auto;
-      width:34px;height:34px;border-radius:10px;
+      width:36px;height:36px;border-radius:12px;
       display:grid;place-items:center;
       background:rgba(56,189,248,.14);
       border:1px solid rgba(56,189,248,.35);
-      color:#bfeaff; font-weight:900;
+      color:#bfeaff; font-weight:950;
     }
-    .step b{display:block; margin-bottom:4px}
-    .form{padding:18px}
-    label{display:block; font-weight:700; margin:10px 0 6px}
+
+    form{margin-top:10px}
+    label{display:block; font-weight:850; margin:10px 0 6px}
     input, textarea, select{
       width:100%;
       padding:12px 12px;
@@ -127,173 +200,287 @@
       background:rgba(0,0,0,.18);
       color:var(--text);
       outline:none;
+      min-height:44px;
     }
     textarea{min-height:110px; resize:vertical}
     .hint{font-size:12px; color:var(--muted); margin-top:6px}
+    .success{
+      display:none;
+      margin-top:10px;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(34,197,94,.35);
+      background:rgba(34,197,94,.10);
+      color:#c9f9d8;
+    }
+
+    /* Focus styles */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+      outline:3px solid rgba(56,189,248,.55);
+      outline-offset:2px;
+    }
+
     .foot{
       margin-top:26px;
       padding:14px 0 0;
-      color:rgba(255,255,255,.55);
+      color:rgba(255,255,255,.58);
       font-size:12px;
       border-top:1px solid var(--border);
     }
-    @media (max-width: 920px){
+
+    /* Mobile-first responsiveness */
+    @media (max-width: 940px){
       .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
       .twoCol{grid-template-columns:1fr}
-      h1{font-size:28px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .btn{transition:none}
     }
   </style>
 </head>
+
 <body>
+  <a class="skip" href="#content">Sari la conținut</a>
+
   <div class="wrap">
-    <div class="nav">
-      <div class="brand"><span class="dot"></span> ElectroVerde <span style="opacity:.65;font-weight:700">| PTJ Energie Verde</span></div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap">
+    <header class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        ElectroVerde <span style="opacity:.68;font-weight:800">| PTJ Energie Verde</span>
+      </div>
+      <nav class="navlinks" aria-label="Navigație">
         <a class="pill" href="#pachete">Pachete</a>
+        <a class="pill" href="#proiect-tip">Proiect tip</a>
         <a class="pill" href="#proces">Proces</a>
         <a class="pill" href="#contact">Contact</a>
-      </div>
-    </div>
+      </nav>
+    </header>
 
-    <div class="hero">
-      <div class="card heroMain">
-        <div class="kicker">
-          <span class="badge">UAT • PTJ 2026</span>
-          <span>PV pentru autoconsum + stocare + monitorizare</span>
+    <main id="content">
+      <section class="hero" aria-label="Introducere">
+        <div class="card heroMain">
+          <div class="kicker">
+            <span class="badge">UAT • PTJ 2026</span>
+            <span>PV pentru autoconsum + stocare + monitorizare</span>
+          </div>
+
+          <h1>Implementare “audit-friendly” pentru proiecte PTJ: energie regenerabilă + stocare</h1>
+          <p class="sub">
+            UAT-ul depune proiectul. ElectroVerde sprijină tehnic (dimensionare, pachete, implementare EPC după procedură)
+            cu focus pe <b>Prahova</b> (prioritar), apoi <b>Galați</b> și <b>Dolj</b>.
+          </p>
+
+          <div class="ctaRow" role="group" aria-label="Acțiuni rapide">
+            <a class="btn btnPrimary" href="#contact">Cere Rapid Energy Assessment (5 zile)</a>
+            <a class="btn btnGhost" href="#downloads">Descarcă One-Pager & Checklist</a>
+            <a class="btn btnSecondary" href="#eligibilitate">Eligibilitate & timeline</a>
+          </div>
+
+          <div class="grid3" id="pachete">
+            <div class="card box">
+              <h3>PV-Only (clădiri publice)</h3>
+              <p>Dimensionare + execuție + punere în funcțiune pentru autoconsum.</p>
+            </div>
+            <div class="card box">
+              <h3>PV + Stocare</h3>
+              <p>Baterii + EMS pentru optimizare consum și reducere vârfuri.</p>
+            </div>
+            <div class="card box">
+              <h3>Community-Ready</h3>
+              <p>Arhitectură scalabilă pentru extindere și comunități de energie.</p>
+            </div>
+          </div>
         </div>
 
-        <h1>Implementare “audit-friendly” pentru proiecte PTJ: energie regenerabilă + stocare</h1>
-        <p class="sub">
-          UAT-ul depune proiectul. ElectroVerde sprijină tehnic (dimensionare, pachete, implementare EPC după procedură) pentru
-          <b>Prahova</b> (prioritar), apoi <b>Galați</b> și <b>Dolj</b>.
+        <aside class="card side" id="eligibilitate" aria-label="Eligibilitate și date">
+          <p class="sideTitle">Eligibilitate & date</p>
+          <ul class="list">
+            <li>Solicitant: <b>UAT</b> (ElectroVerde nu depune ca beneficiar)</li>
+            <li>Zone eligibile: Gorj, Hunedoara (Valea Jiului), Dolj, Galați, Prahova, Mureș</li>
+            <li>Depunere: <b>25.02.2026 – 26.08.2026</b></li>
+            <li>Investiții: SRE pentru autoconsum + stocare</li>
+          </ul>
+
+          <div class="note">
+            <b>Focus ElectroVerde:</b>
+            <div class="muted" style="margin-top:6px">
+              Prahova (proximitate București/Ilfov) → apoi Galați/Dolj (echipe dedicate pe loturi).
+            </div>
+          </div>
+
+          <div class="hint">
+            Recomandăm verificarea versiunii curente a ghidului pe site-ul oficial (MIPE / PTJ).
+          </div>
+        </aside>
+      </section>
+
+      <section class="section card sectionCard" id="downloads" aria-label="Resurse">
+        <h2>Resurse rapide (PDF)</h2>
+        <p class="muted" style="margin:0 0 12px">
+          Trimiteți aceste documente intern (primar / administrator public / achiziții) ca să aliniem rapid discuția.
+        </p>
+        <div class="ctaRow">
+          <!-- Pune fișierele în /assets/ sau schimbă linkurile -->
+          <a class="btn btnGhost" href="/assets/electroverde-ptj-one-pager.pdf" download>Descarcă One-Pager (PDF)</a>
+          <a class="btn btnGhost" href="/assets/electroverde-ptj-checklist-rea.pdf" download>Descarcă Checklist REA (PDF)</a>
+        </div>
+        <div class="hint">Tip: păstrați PDF-urile sub 1–2 MB pentru încărcare rapidă pe mobil.</div>
+      </section>
+
+      <section class="section card sectionCard" id="proiect-tip" aria-label="Proiect tip">
+        <h2>Proiect tip: 3 clădiri publice (2 scenarii)</h2>
+        <p class="muted" style="margin:0 0 12px">
+          Șablon rapid pentru discuții și pre-dimensionare: <b>școală + primărie + dispensar</b>.
         </p>
 
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="#contact">Cere Rapid Energy Assessment (5 zile)</a>
-          <a class="btn btnGhost" href="#eligibilitate">Vezi eligibilitate & timeline</a>
+        <div class="twoCol">
+          <div class="card box" style="box-shadow:none">
+            <h3>Scenariu 1 — minim (rapid & safe)</h3>
+            <p class="muted">
+              • Școală: 50–100 kWp PV<br/>
+              • Primărie: 20–60 kWp PV<br/>
+              • Dispensar: 10–30 kWp PV<br/>
+              • Monitorizare unificată + rapoarte
+            </p>
+          </div>
+
+          <div class="card box" style="box-shadow:none">
+            <h3>Scenariu 2 — optim (cu stocare)</h3>
+            <p class="muted">
+              • PV total: 120–250 kWp<br/>
+              • Baterie: 100–300 kWh (pe profil de consum)<br/>
+              • EMS + alerte + rapoarte<br/>
+              • Pregătire scalare (încă 2–5 clădiri / comunitate)
+            </p>
+          </div>
         </div>
 
-        <div class="grid">
-          <div class="card box">
-            <h3>PV-Only (clădiri publice)</h3>
-            <p>Dimensionare + execuție + punere în funcțiune pentru autoconsum.</p>
-          </div>
-          <div class="card box">
-            <h3>PV + Stocare</h3>
-            <p>Baterii + EMS pentru optimizare consum și reducere vârfuri.</p>
-          </div>
-          <div class="card box">
-            <h3>Community-Ready</h3>
-            <p>Pregătire scalare + monitorizare, în logica comunităților de energie.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card heroSide" id="eligibilitate">
-        <p class="sideTitle">Eligibilitate & date</p>
-        <ul class="list">
-          <li>Solicitant: <b>UAT</b> (ElectroVerde nu depune ca beneficiar)</li>
-          <li>Zone eligibile: Gorj, Hunedoara (Valea Jiului), Dolj, Galați, Prahova, Mureș</li>
-          <li>Depunere: <b>25.02.2026 – 26.08.2026</b></li>
-          <li>Investiții: SRE pentru autoconsum + stocare</li>
-        </ul>
-        <div style="margin-top:14px; padding:12px; border-radius:12px; border:1px solid var(--border); background:rgba(34,197,94,.08)">
-          <b>Focus ElectroVerde:</b>
-          <div class="muted" style="margin-top:6px">
-            Prahova (proximitate București/Ilfov) → apoi Galați/Dolj (echipe dedicate pe loturi).
-          </div>
-        </div>
         <div class="hint">
-          *Detaliile oficiale ale apelului sunt publicate de MIPE (AM PTJ). Recomandăm verificarea versiunii curente a ghidului.
+          Notă: dimensionarea finală se face pe baza consumului real, a acoperișurilor și a condițiilor de racordare.
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="section card" style="padding:18px" id="pachete">
-      <h2>Pachete standard (ca să simplificăm decizia UAT)</h2>
-      <div class="twoCol">
-        <div>
-          <b>1) PV-Only</b>
-          <div class="muted">Clădiri publice: proiectare, execuție, punere în funcțiune, training personal.</div>
-          <div style="height:10px"></div>
-          <b>2) PV + Stocare</b>
-          <div class="muted">Baterii + EMS + monitorizare unificată + rapoarte lunare.</div>
-        </div>
-        <div>
-          <b>3) PV + Stocare + Community-Ready</b>
-          <div class="muted">Arhitectură scalabilă (contorizare/monitorizare) pentru extindere și integrare în comunități de energie.</div>
-          <div style="height:10px"></div>
-          <b>Opțional: O&M</b>
-          <div class="muted">Mentenanță și intervenții planificate (contract separat, după procedură).</div>
-        </div>
-      </div>
-    </div>
+      <section class="section twoCol" id="proces" aria-label="Proces și contact">
+        <div class="card sectionCard">
+          <h2>Proces (simplu, trasabil, audit-friendly)</h2>
 
-    <div class="section twoCol" id="proces">
-      <div class="card steps">
-        <div class="step">
-          <div class="num">1</div>
-          <div><b>Rapid Energy Assessment (5 zile)</b><span class="muted"> Colectăm date minime (consum, clădiri, suprafețe), livrăm 2 scenarii + buget orientativ + riscuri.</span></div>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <div><b>Configurare pachet</b><span class="muted"> PV-Only / PV+Storage / Community-Ready, cu livrabile și timeline clar.</span></div>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <div><b>Implementare EPC după procedură</b><span class="muted"> Execuție, punere în funcțiune, recepție, documentații.</span></div>
-        </div>
-      </div>
+          <div class="steps" style="margin-top:10px">
+            <div class="card step" style="box-shadow:none">
+              <div class="num">1</div>
+              <div>
+                <b>Rapid Energy Assessment (5 zile)</b>
+                <div class="muted">Colectăm date minime → livrăm 2 scenarii + buget orientativ + riscuri tehnice.</div>
+              </div>
+            </div>
 
-      <div class="card form" id="contact">
-        <h2 style="margin:0 0 6px">Cere REA (5 zile)</h2>
-        <div class="muted">Trimite datele minime. Revenim cu pașii și un call de 15 minute.</div>
+            <div class="card step" style="box-shadow:none">
+              <div class="num">2</div>
+              <div>
+                <b>Configurare pachet</b>
+                <div class="muted">PV-Only / PV+Storage / Community-Ready, cu livrabile și timeline clar.</div>
+              </div>
+            </div>
 
-        <!-- Replace action with your endpoint (Formspree / Netlify forms / CRM). -->
-        <form id="leadForm" action="mailto:office@electroverde.ro" method="post" enctype="text/plain">
-          <label>UAT / Localitate</label>
-          <input name="uat" placeholder="ex: UAT Comuna X, Prahova" required />
-
-          <label>Persoană de contact</label>
-          <input name="contact" placeholder="Nume + funcție (ex: Administrator public)" required />
-
-          <label>Email / Telefon</label>
-          <input name="email_tel" placeholder="email@uat.ro / 07xx..." required />
-
-          <label>Județ</label>
-          <select name="judet" required>
-            <option value="">Selectează</option>
-            <option>Prahova</option>
-            <option>Galați</option>
-            <option>Dolj</option>
-            <option>Alt județ eligibil</option>
-          </select>
-
-          <label>Clădiri vizate (minim 2–3)</label>
-          <textarea name="cladiri" placeholder="ex: școală gimnazială, primărie, dispensar + adrese"></textarea>
-
-          <label>Consum (dacă îl aveți)</label>
-          <textarea name="consum" placeholder="ex: kWh/an sau facturi lunare; orice estimare ajută"></textarea>
-
-          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
-            <button type="submit" class="btnPrimary">Trimite solicitarea</button>
-            <a class="btnGhost btn" href="#eligibilitate">Vezi eligibilitate</a>
+            <div class="card step" style="box-shadow:none">
+              <div class="num">3</div>
+              <div>
+                <b>Implementare EPC (după procedură)</b>
+                <div class="muted">Execuție, punere în funcțiune, recepție, documentații, instruire.</div>
+              </div>
+            </div>
           </div>
 
-          <div class="hint">Notă: electroverde.ro oferă suport tehnic. Solicitantul în apel este UAT-ul.</div>
-        </form>
-      </div>
-    </div>
+          <div class="hint" style="margin-top:10px">
+            ElectroVerde poate furniza note tehnice generale și estimări orientative; documentația de achiziție rămâne la UAT/consultant.
+          </div>
+        </div>
 
-    <div class="foot">
-      © ElectroVerde • PV + stocare • Documentații & recepții • 2026
-    </div>
+        <div class="card sectionCard" id="contact">
+          <h2 style="margin:0 0 6px">Cere REA (5 zile)</h2>
+          <div class="muted">Completează datele minime. Revenim cu pașii și un call de 15 minute.</div>
+
+          <!-- ✅ NETLIFY FORMS (default) -->
+          <!-- 1) Pune pagina pe Netlify
+               2) În Netlify Dashboard: Site settings → Forms → active
+               3) Primești lead-urile în Netlify → poți face automation spre CRM -->
+
+          <form id="leadForm"
+                name="ptj-leads"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/thanks/">
+
+            <!-- required hidden input for Netlify -->
+            <input type="hidden" name="form-name" value="ptj-leads" />
+            <p style="display:none">
+              <label>Nu completa: <input name="bot-field" /></label>
+            </p>
+
+            <label for="uat">UAT / Localitate</label>
+            <input id="uat" name="uat" placeholder="ex: UAT Comuna X, Prahova" required />
+
+            <label for="contact_person">Persoană de contact</label>
+            <input id="contact_person" name="contact_person" placeholder="Nume + funcție (ex: Administrator public)" required />
+
+            <label for="email_tel">Email / Telefon</label>
+            <input id="email_tel" name="email_tel" placeholder="email@uat.ro / 07xx..." required />
+
+            <label for="judet">Județ</label>
+            <select id="judet" name="judet" required>
+              <option value="">Selectează</option>
+              <option>Prahova</option>
+              <option>Galați</option>
+              <option>Dolj</option>
+              <option>Alt județ eligibil</option>
+            </select>
+
+            <label for="buildings">Clădiri vizate (minim 2–3)</label>
+            <textarea id="buildings" name="buildings" placeholder="ex: școală, primărie, dispensar + adrese"></textarea>
+
+            <label for="consumption">Consum (dacă îl aveți)</label>
+            <textarea id="consumption" name="consumption" placeholder="ex: kWh/an sau facturi lunare; orice estimare ajută"></textarea>
+
+            <div class="ctaRow" style="margin-top:12px">
+              <button type="submit" class="btn btnPrimary">Trimite solicitarea</button>
+              <a class="btn btnGhost" href="#downloads">Descarcă PDF-uri</a>
+            </div>
+
+            <div class="success" id="successBox" role="status" aria-live="polite">
+              Mulțumim! Solicitarea a fost trimisă. Revenim cu pașii și un call scurt.
+            </div>
+
+            <div class="hint">
+              Notă: solicitantul în apel este UAT-ul. ElectroVerde oferă suport tehnic și implementare după procedură.
+            </div>
+          </form>
+
+          <!-- ✅ Alternative: Formspree (dacă nu vrei Netlify)
+               - Înlocuiește <form ...> cu:
+               <form action="https://formspree.io/f/XXXXYYYY" method="POST">
+               ... câmpurile ...
+               </form>
+          -->
+          <!-- ✅ Alternative: HubSpot / Zoho
+               - În UI-ul lor generezi embed code și îl pui aici în locul formului.
+               - Avantaj: intră direct în CRM, scoring automat.
+          -->
+        </div>
+      </section>
+
+      <div class="foot">
+        © ElectroVerde • PV + stocare • Documentații & recepții • 2026
+      </div>
+    </main>
   </div>
 
   <script>
-    // Minimal UX: prevent empty submits & show quick toast
+    // Minimal UX: validate + show message if staying on page
     const form = document.getElementById('leadForm');
+    const successBox = document.getElementById('successBox');
+
     form.addEventListener('submit', (e) => {
       const required = form.querySelectorAll('[required]');
       for (const el of required) {
@@ -303,6 +490,10 @@
           return;
         }
       }
+      // If you don't use /thanks/ redirect, uncomment next lines and remove action="/thanks/"
+      // e.preventDefault();
+      // successBox.style.display = 'block';
+      // form.reset();
     });
   </script>
 </body>
