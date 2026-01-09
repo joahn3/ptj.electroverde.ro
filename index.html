@@ -9,12 +9,25 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b1220" />
 
-  <!-- Optional (recommended): set your canonical URL once deployed -->
+  <!-- ✅ PRODUCTION TODO: set canonical to the final public URL -->
   <!-- <link rel="canonical" href="https://electroverde.ro/ptj/" /> -->
 
+  <!-- Favicons (optional but recommended) -->
+  <link rel="icon" href="/favicon.ico" />
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="PTJ Energie Verde (UAT) – ElectroVerde" />
   <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Pachete standard + Rapid Energy Assessment în 5 zile." />
   <meta property="og:type" content="website" />
+  <!-- ✅ PRODUCTION TODO: set og:url -->
+  <!-- <meta property="og:url" content="https://electroverde.ro/ptj/" /> -->
+  <!-- ✅ PRODUCTION TODO: add an og:image (1200x630) -->
+  <!-- <meta property="og:image" content="https://electroverde.ro/assets/og-ptj.jpg" /> -->
+
+  <!-- Twitter Card (optional) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:image" content="https://electroverde.ro/assets/og-ptj.jpg" /> -->
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -34,7 +47,6 @@
   <style>
     :root{
       --bg:#0b1220;
-      --card:#111b2e;
       --muted:#9fb0d0;
       --text:#e7eefc;
       --accent:#22c55e;
@@ -47,6 +59,8 @@
       --h1: clamp(26px, 4.6vw, 40px);
       --h2: clamp(18px, 2.8vw, 24px);
       --p:  clamp(15px, 2.2vw, 16px);
+
+      --stickyH: 74px; /* approximate sticky CTA height */
     }
 
     *{box-sizing:border-box}
@@ -63,10 +77,13 @@
       font-size: var(--p);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      padding-bottom: calc(var(--stickyH) + env(safe-area-inset-bottom));
     }
 
     a{color:inherit}
     .wrap{max-width:1100px; margin:0 auto; padding: 18px var(--pad) 84px}
+    .muted{color:var(--muted)}
+    .hint{font-size:12px; color:var(--muted); margin-top:8px}
 
     /* Skip link */
     .skip{
@@ -99,6 +116,7 @@
       font-weight:850;
     }
     .pill:active{transform:translateY(1px)}
+    section{scroll-margin-top: 12px;}
 
     .card{
       background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
@@ -158,6 +176,8 @@
       color:#cfefff;
     }
 
+    .hr{height:1px; background:var(--border); margin:14px 0}
+
     .grid3{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -179,14 +199,11 @@
       background:rgba(34,197,94,.08);
     }
     .note b{display:block}
-    .hint{font-size:12px; color:var(--muted); margin-top:8px}
 
     /* Sections */
     .section{margin-top:18px}
     .sectionCard{padding: var(--pad)}
-    .muted{color:var(--muted)}
     .twoCol{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    .hr{height:1px; background:var(--border); margin:14px 0}
 
     /* Steps */
     .steps{display:grid; gap:12px; margin-top:10px}
@@ -262,6 +279,7 @@
       position:fixed;
       left:0; right:0; bottom:0;
       padding:10px var(--pad);
+      padding-bottom: calc(10px + env(safe-area-inset-bottom));
       background:rgba(11,18,32,.78);
       backdrop-filter: blur(8px);
       border-top:1px solid var(--border);
@@ -278,7 +296,7 @@
       flex-wrap:wrap;
     }
     .stickyCta .txt{color:var(--muted); font-weight:850; font-size:13px}
-    .stickyCta .btn{flex:1; min-width: 180px}
+    .stickyCta .btn{flex:1; min-width: 160px}
 
     .foot{
       margin-top:26px;
@@ -286,9 +304,14 @@
       color:rgba(255,255,255,.58);
       font-size:12px;
       border-top:1px solid var(--border);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
     }
+    .foot a{opacity:.95}
 
-    /* Responsive */
     @media (max-width: 940px){
       .hero{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
@@ -341,8 +364,8 @@
             <a class="btn btnSecondary" href="#proces">Vezi procesul</a>
           </div>
 
-          <!-- Pain → Solution (sales copy, short & credible) -->
           <div class="hr"></div>
+
           <div class="twoCol">
             <div>
               <b>Ce blochează de obicei UAT-urile</b>
@@ -351,7 +374,7 @@
               </div>
             </div>
             <div>
-              <b>Ce face ElectroVerde diferit</b>
+              <b>Ce facem diferit</b>
               <div class="muted" style="margin-top:6px">
                 pachete standard + REA în 5 zile + livrabile trasabile (punere în funcțiune, testări, manuale, training).
               </div>
@@ -374,7 +397,7 @@
           </div>
 
           <div class="hint" style="margin-top:10px">
-            *Nu promitem “magie”. Livrăm un plan implementabil, cu riscuri și dependențe explicite.
+            *Livrăm un plan implementabil, cu riscuri și dependențe explicite (fără promisiuni “magice”).
           </div>
         </div>
 
@@ -408,7 +431,8 @@
           </ul>
 
           <div class="hint">
-            Recomandăm verificarea versiunii curente a ghidului pe pagina oficială.
+            Recomandăm verificarea versiunii curente a ghidului pe pagina oficială:
+            <a href="https://mfe.gov.ro/ghiduri_ptj/" target="_blank" rel="noopener">mfe.gov.ro/ghiduri_ptj</a>
           </div>
         </aside>
       </section>
@@ -493,7 +517,7 @@
 
           <details>
             <summary>Ne ajutați înainte de depunere?</summary>
-            <p>Da, prin REA (5 zile) și note tehnice generale. Evităm “caiete de sarcini cu dedicație” — păstrăm abordarea curată și audit-friendly.</p>
+            <p>Da, prin REA (5 zile) și note tehnice generale. Evităm cerințe cu dedicație — păstrăm abordarea curată și audit-friendly.</p>
           </details>
 
           <details>
@@ -515,7 +539,7 @@
           Trimiteți aceste documente intern (primar / administrator public / achiziții) ca să aliniem rapid discuția.
         </p>
         <div class="ctaRow">
-          <!-- TODO: pune fișierele reale în /assets/ -->
+          <!-- ✅ PRODUCTION TODO: upload real PDFs to /assets/ -->
           <a class="btn btnGhost" href="/assets/electroverde-ptj-one-pager.pdf" download>Descarcă One-Pager (PDF)</a>
           <a class="btn btnGhost" href="/assets/electroverde-ptj-checklist-rea.pdf" download>Descarcă Checklist REA (PDF)</a>
         </div>
@@ -527,10 +551,10 @@
       <!-- CONTACT / FORM -->
       <section class="section twoCol" aria-label="Contact și formular">
         <div class="card sectionCard">
-          <h2>Ce primim de la voi (minim) ca să livrăm REA</h2>
+          <h2>Ce avem nevoie (minim) ca să livrăm REA</h2>
           <div class="muted">
             • 2–3 clădiri vizate (denumire + adresă)<br/>
-            • consum (ideal 12 luni) sau măcar o estimare<br/>
+            • consum (ideal 12 luni) sau o estimare<br/>
             • 6–10 poze acoperiș + poze tablouri/contor (dacă se poate)<br/>
             • persoană de contact + interval de acces
           </div>
@@ -539,19 +563,26 @@
 
           <h2>Contact direct</h2>
           <div class="muted">
+            <!-- ✅ PRODUCTION TODO: replace placeholders -->
             <b>[Nume]</b> – [Funcție]<br/>
-            Tel: <b>[07xx xxx xxx]</b><br/>
-            Email: <b>[contact@electroverde.ro]</b>
+            Tel: <a href="tel:+40XXXXXXXXX"><b>[+40 xxx xxx xxx]</b></a><br/>
+            Email: <a href="mailto:contact@electroverde.ro"><b>contact@electroverde.ro</b></a>
           </div>
 
           <div class="hint">
             *Înlocuiește datele de contact înainte de publicare.
           </div>
+
+          <noscript>
+            <div class="hint" style="margin-top:10px">
+              JavaScript este dezactivat. Formularul funcționează în continuare, dar validarea avansată poate lipsi.
+            </div>
+          </noscript>
         </div>
 
         <div class="card sectionCard" id="contact">
           <h2 style="margin:0 0 6px">Cere Rapid Energy Assessment (REA)</h2>
-          <div class="muted">Completează datele minime. Revenim cu pașii și un call scurt (15 minute).</div>
+          <div class="muted">Completează datele minime (≈ 2 minute). Revenim cu pașii și un call scurt (15 minute).</div>
 
           <!-- NETLIFY FORMS (production-ready) -->
           <form id="leadForm"
@@ -567,10 +598,10 @@
             </p>
 
             <label for="uat">UAT / Localitate</label>
-            <input id="uat" name="uat" placeholder="ex: UAT Comuna X" required />
+            <input id="uat" name="uat" placeholder="ex: UAT Comuna X" required autocomplete="organization" />
 
             <label for="judet">Județ / Zonă eligibilă</label>
-            <select id="judet" name="judet" required>
+            <select id="judet" name="judet" required autocomplete="address-level1">
               <option value="">Selectează județul / zona</option>
               <option>Prahova</option>
               <option>Galați</option>
@@ -582,10 +613,13 @@
             </select>
 
             <label for="contact_person">Persoană de contact</label>
-            <input id="contact_person" name="contact_person" placeholder="Nume + funcție (ex: Administrator public)" required />
+            <input id="contact_person" name="contact_person" placeholder="Nume + funcție (ex: Administrator public)" required autocomplete="name" />
 
-            <label for="email_tel">Email / Telefon</label>
-            <input id="email_tel" name="email_tel" placeholder="email@uat.ro / 07xx..." required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@uat.ro" required autocomplete="email" inputmode="email" />
+
+            <label for="tel">Telefon</label>
+            <input id="tel" name="tel" type="tel" placeholder="07xx..." required autocomplete="tel" inputmode="tel" />
 
             <label for="buildings">Clădiri vizate (minim 2–3)</label>
             <textarea id="buildings" name="buildings" placeholder="ex: școală, primărie, dispensar + adrese"></textarea>
@@ -593,12 +627,17 @@
             <label for="consumption">Consum (dacă îl aveți)</label>
             <textarea id="consumption" name="consumption" placeholder="ex: kWh/an sau facturi lunare; orice estimare ajută"></textarea>
 
-            <!-- GDPR-friendly consent (recommended for public production) -->
+            <label for="drive_link">Link poze/facturi (opțional)</label>
+            <input id="drive_link" name="drive_link" type="url" placeholder="ex: link Google Drive / OneDrive (read-only)" inputmode="url" autocomplete="url" />
+
+            <!-- GDPR consent -->
             <div class="consent">
               <input id="consent" name="consent" type="checkbox" required />
               <div class="muted">
                 <b>Consimțământ:</b> Sunt de acord ca ElectroVerde să folosească datele transmise pentru a mă contacta și a pregăti REA.
-                Datele nu sunt folosite în alte scopuri. (Puteți solicita ștergerea oricând.)
+                Datele sunt folosite doar în acest scop și se păstrează strict cât este necesar (puteți solicita ștergerea oricând).
+                <br/>
+                <a href="/politica-de-confidentialitate/" target="_blank" rel="noopener">Politica de confidențialitate</a>
               </div>
             </div>
 
@@ -615,7 +654,12 @@
       </section>
 
       <div class="foot">
-        © ElectroVerde • PV + stocare • Documentații & recepții • 2026
+        <div>© ElectroVerde • PV + stocare • 2026</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/politica-de-confidentialitate/">Politica de confidențialitate</a>
+          <span style="opacity:.5">•</span>
+          <a href="/cookies/">Cookies</a>
+        </div>
       </div>
     </main>
   </div>
@@ -632,14 +676,31 @@
   <script>
     // Minimal UX validation (keeps form clean, avoids empty required fields)
     const form = document.getElementById('leadForm');
+
     form.addEventListener('submit', (e) => {
       const required = form.querySelectorAll('[required]');
       for (const el of required) {
-        if ((el.type === 'checkbox' && !el.checked) || (!el.value || !el.value.trim())) {
-          e.preventDefault();
-          alert('Completează câmpurile obligatorii (UAT, județ/zonă, contact, email/telefon, consimțământ).');
-          return;
+        if (el.type === 'checkbox') {
+          if (!el.checked) {
+            e.preventDefault();
+            alert('Te rog bifează consimțământul pentru a putea fi contactat(ă).');
+            return;
+          }
+        } else {
+          if (!el.value || !el.value.trim()) {
+            e.preventDefault();
+            alert('Completează câmpurile obligatorii (UAT, județ/zonă, contact, email, telefon).');
+            return;
+          }
         }
+      }
+
+      // Basic email sanity (extra safe)
+      const email = document.getElementById('email');
+      if (email && !email.checkValidity()) {
+        e.preventDefault();
+        alert('Te rog introdu un email valid.');
+        return;
       }
     });
   </script>
