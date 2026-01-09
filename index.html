@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 
-  <title>PTJ Energie Verde (UAT) | ElectroVerde – PV + Stocare + Implementare</title>
-  <meta name="description" content="ElectroVerde sprijină UAT-urile eligibile PTJ cu pachete tehnice și implementare EPC: fotovoltaic pentru autoconsum + stocare + monitorizare. Focus operațional: Prahova. Acoperire: Gorj, Hunedoara, Valea Jiului, Dolj, Galați, Prahova, Mureș." />
+  <title>Programul Tranziție Justă (PTJ) – Energie verde pentru UAT | ElectroVerde</title>
+  <meta name="description" content="ElectroVerde sprijină UAT-urile eligibile din Programul Tranziție Justă (PTJ) cu pachete tehnice și implementare EPC: fotovoltaic pentru autoconsum + stocare + monitorizare. Focus operațional: Prahova. Acoperire: Gorj, Hunedoara, Valea Jiului, Dolj, Galați, Prahova, Mureș." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b1220" />
 
@@ -15,8 +15,8 @@
   <link rel="icon" href="/favicon.ico" />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="PTJ Energie Verde (UAT) – ElectroVerde" />
-  <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Pachete standard + Rapid Energy Assessment în 5 zile." />
+  <meta property="og:title" content="Programul Tranziție Justă (PTJ) – Energie verde UAT | ElectroVerde" />
+  <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Pachete standard + Rapid Energy Assessment în 5 zile. Zone: Gorj, Hunedoara, Valea Jiului, Dolj, Galați, Prahova, Mureș." />
   <meta property="og:type" content="website" />
   <!-- ✅ PRODUCTION TODO -->
   <!-- <meta property="og:url" content="https://electroverde.ro/ptj/" /> -->
@@ -28,8 +28,8 @@
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
-    "name":"PTJ Energie Verde (UAT) | ElectroVerde",
-    "description":"Implementare audit-friendly pentru proiecte PTJ: PV pentru autoconsum + stocare + monitorizare.",
+    "name":"Programul Tranziție Justă (PTJ) – Energie verde pentru UAT | ElectroVerde",
+    "description":"Implementare audit-friendly pentru proiecte din Programul Tranziție Justă (PTJ): PV pentru autoconsum + stocare + monitorizare.",
     "publisher":{
       "@type":"Organization",
       "name":"ElectroVerde",
@@ -54,7 +54,7 @@
       --h2: clamp(18px, 2.8vw, 24px);
       --p:  clamp(15px, 2.2vw, 16px);
 
-      --stickyH: 74px; /* approximate sticky CTA height */
+      --stickyH: 78px; /* approximate sticky CTA height */
     }
 
     *{box-sizing:border-box}
@@ -248,6 +248,7 @@
       min-height:44px;
     }
     textarea{min-height:110px; resize:vertical}
+
     .consent{
       margin-top:10px;
       display:flex;
@@ -289,7 +290,7 @@
       flex-wrap:wrap;
     }
     .stickyCta .txt{color:var(--muted); font-weight:850; font-size:13px}
-    .stickyCta .btn{flex:1; min-width: 160px}
+    .stickyCta .btn{flex:1; min-width: 150px}
 
     .foot{
       margin-top:26px;
@@ -326,9 +327,11 @@
     <header class="nav">
       <div class="brand">
         <span class="dot" aria-hidden="true"></span>
-        ElectroVerde <span style="opacity:.68;font-weight:850">| PTJ Energie Verde</span>
+        ElectroVerde <span style="opacity:.68;font-weight:850">| Tranziție Justă (PTJ) – UAT</span>
       </div>
+
       <nav class="navlinks" aria-label="Navigație">
+        <a class="pill" href="/ghid-uat/">Ghid UAT</a>
         <a class="pill" href="#pachete">Pachete</a>
         <a class="pill" href="#proiect-tip">Proiect tip</a>
         <a class="pill" href="#downloads">PDF</a>
@@ -341,11 +344,11 @@
       <section class="hero" aria-label="Introducere">
         <div class="card heroMain">
           <div class="kicker">
-            <span class="badge">UAT • PTJ 2026</span>
-            <span>PV pentru autoconsum + stocare + monitorizare</span>
+            <span class="badge">Programul Tranziție Justă (PTJ)</span>
+            <span>UAT • energie verde + stocare • 2026</span>
           </div>
 
-          <h1>Implementare “audit-friendly” pentru proiecte PTJ: energie regenerabilă + stocare</h1>
+          <h1>Energie verde pentru UAT: PV pentru autoconsum + stocare (Tranziție Justă)</h1>
 
           <p class="sub">
             UAT-ul depune proiectul. ElectroVerde sprijină tehnic (dimensionare, pachete, implementare EPC după procedură),
@@ -541,6 +544,7 @@
           <!-- ✅ PRODUCTION TODO: upload real PDFs to /assets/ -->
           <a class="btn btnGhost" href="/assets/electroverde-ptj-one-pager.pdf" download>Descarcă One-Pager (PDF)</a>
           <a class="btn btnGhost" href="/assets/electroverde-ptj-checklist-rea.pdf" download>Descarcă Checklist REA (PDF)</a>
+          <a class="btn btnSecondary" href="/ghid-uat/">Ghid UAT (detalii apel)</a>
         </div>
         <div class="hint">
           Tip: păstrați PDF-urile sub 1–2 MB pentru încărcare rapidă pe mobil.
@@ -592,6 +596,9 @@
                 action="/thanks/">
 
             <input type="hidden" name="form-name" value="ptj-leads" />
+            <!-- capture referrer context -->
+            <input type="hidden" name="source_page" value="/ptj/" />
+
             <p style="display:none">
               <label>Nu completa: <input name="bot-field" /></label>
             </p>
@@ -647,14 +654,17 @@
 
             <div class="hint">
               Notă: solicitantul în apel este UAT-ul. ElectroVerde oferă suport tehnic și implementare după procedură.
+              Detalii apel: <a href="/ghid-uat/" style="text-decoration:underline">Ghid UAT</a>.
             </div>
           </form>
         </div>
       </section>
 
       <div class="foot">
-        <div>© ElectroVerde • PV + stocare • 2026</div>
+        <div>© ElectroVerde • Energie verde UAT • 2026</div>
         <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ghid-uat/">Ghid UAT</a>
+          <span style="opacity:.5">•</span>
           <a href="/politica-de-confidentialitate/">Politica de confidențialitate</a>
           <span style="opacity:.5">•</span>
           <a href="/cookies/">Cookies</a>
@@ -668,7 +678,7 @@
     <div class="inner">
       <div class="txt">REA în 5 zile • toate zonele eligibile • focus Prahova</div>
       <a class="btn btnPrimary" href="#contact">Cere REA</a>
-      <a class="btn btnGhost" href="#downloads">PDF</a>
+      <a class="btn btnGhost" href="/ghid-uat/">Ghid UAT</a>
     </div>
   </div>
 
