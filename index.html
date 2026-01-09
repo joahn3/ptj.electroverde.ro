@@ -12,22 +12,16 @@
   <!-- ✅ PRODUCTION TODO: set canonical to the final public URL -->
   <!-- <link rel="canonical" href="https://electroverde.ro/ptj/" /> -->
 
-  <!-- Favicons (optional but recommended) -->
   <link rel="icon" href="/favicon.ico" />
-  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="PTJ Energie Verde (UAT) – ElectroVerde" />
   <meta property="og:description" content="PV pentru autoconsum + stocare + monitorizare. Pachete standard + Rapid Energy Assessment în 5 zile." />
   <meta property="og:type" content="website" />
-  <!-- ✅ PRODUCTION TODO: set og:url -->
+  <!-- ✅ PRODUCTION TODO -->
   <!-- <meta property="og:url" content="https://electroverde.ro/ptj/" /> -->
-  <!-- ✅ PRODUCTION TODO: add an og:image (1200x630) -->
   <!-- <meta property="og:image" content="https://electroverde.ro/assets/og-ptj.jpg" /> -->
-
-  <!-- Twitter Card (optional) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <!-- <meta name="twitter:image" content="https://electroverde.ro/assets/og-ptj.jpg" /> -->
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -147,7 +141,7 @@
     }
     h1{margin:12px 0 10px; font-size: var(--h1); line-height:1.12}
     h2{margin:0 0 10px; font-size: var(--h2); line-height:1.2}
-    .sub{color:var(--muted); margin:0 0 14px}
+    .sub{color:var(--muted); margin:0 0 10px}
 
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .btn{
@@ -176,8 +170,6 @@
       color:#cfefff;
     }
 
-    .hr{height:1px; background:var(--border); margin:14px 0}
-
     .grid3{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -199,6 +191,8 @@
       background:rgba(34,197,94,.08);
     }
     .note b{display:block}
+
+    .hr{height:1px; background:var(--border); margin:14px 0}
 
     /* Sections */
     .section{margin-top:18px}
@@ -267,7 +261,6 @@
     .consent input{min-height:auto; width:auto; margin-top:3px}
     .consent .muted{font-size:12px; line-height:1.4}
 
-    /* Focus */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible{
       outline:3px solid rgba(56,189,248,.55);
       outline-offset:2px;
@@ -353,9 +346,16 @@
           </div>
 
           <h1>Implementare “audit-friendly” pentru proiecte PTJ: energie regenerabilă + stocare</h1>
+
           <p class="sub">
             UAT-ul depune proiectul. ElectroVerde sprijină tehnic (dimensionare, pachete, implementare EPC după procedură),
             ca să scurtezi drumul de la “intenție” la “proiect implementabil”.
+          </p>
+
+          <!-- ✅ HERO reference to your guide page -->
+          <p class="hint" style="margin:0 0 8px">
+            Vrei detalii complete despre apel (eligibilitate, ce se finanțează, pași, documente, linkuri oficiale)?
+            <a href="/ghid-uat/" style="text-decoration:underline">Vezi Ghidul UAT (pagina dedicată apelului)</a>.
           </p>
 
           <div class="ctaRow" role="group" aria-label="Acțiuni rapide">
@@ -431,8 +431,7 @@
           </ul>
 
           <div class="hint">
-            Recomandăm verificarea versiunii curente a ghidului pe pagina oficială:
-            <a href="https://mfe.gov.ro/ghiduri_ptj/" target="_blank" rel="noopener">mfe.gov.ro/ghiduri_ptj</a>
+            Ghid practic (pe înțeles + linkuri): <a href="/ghid-uat/" style="text-decoration:underline">Ghid UAT</a>
           </div>
         </aside>
       </section>
@@ -575,7 +574,7 @@
 
           <noscript>
             <div class="hint" style="margin-top:10px">
-              JavaScript este dezactivat. Formularul funcționează în continuare, dar validarea avansată poate lipsi.
+              JavaScript este dezactivat. Formularul funcționează în continuare.
             </div>
           </noscript>
         </div>
@@ -676,7 +675,6 @@
   <script>
     // Minimal UX validation (keeps form clean, avoids empty required fields)
     const form = document.getElementById('leadForm');
-
     form.addEventListener('submit', (e) => {
       const required = form.querySelectorAll('[required]');
       for (const el of required) {
@@ -695,7 +693,6 @@
         }
       }
 
-      // Basic email sanity (extra safe)
       const email = document.getElementById('email');
       if (email && !email.checkValidity()) {
         e.preventDefault();
