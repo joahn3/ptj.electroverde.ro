@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+  <title>Detalii apel PTJ Energie Verde (UAT) | ElectroVerde</title>
+  <meta name="description" content="Pagina cu detalii despre apelul PTJ pentru Energie verde: eligibilitate, zone, ce se finanțează, timeline și pași recomandați pentru UAT. Include linkuri oficiale și checklist practic." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- ✅ PRODUCTION TODO: set canonical to the final public URL -->
+  <!-- <link rel="canonical" href="https://electroverde.ro/ptj/apel/" /> -->
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Detalii apel PTJ Energie Verde (UAT) – ElectroVerde" />
+  <meta property="og:description" content="Eligibilitate, ce se finanțează, timeline și pași recomandați pentru UAT. Linkuri oficiale + checklist practic." />
+  <meta property="og:type" content="website" />
+  <!-- ✅ PRODUCTION TODO -->
+  <!-- <meta property="og:url" content="https://electroverde.ro/ptj/apel/" /> -->
+  <!-- <meta property="og:image" content="https://electroverde.ro/assets/og-ptj-apel.jpg" /> -->
+
+  <!-- Structured data: FAQ (safe, non-committal) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Cine poate depune proiectul?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solicitantul este UAT-ul (autoritatea publică locală) eligibilă în apel. Implementarea se face ulterior prin proceduri legale de achiziție."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ce tip de investiții sunt vizate?",
+        "acceptedAnswer":{"@type":"Answer","text":"Capacități de producere energie electrică/termică din surse regenerabile pentru autoconsum (ex: fotovoltaic, eolian, alte SRE) și capacități de stocare, conform condițiilor din ghidul oficial."}
+      },
+      {
+        "@type":"Question",
+        "name":"Care este perioada de depunere?",
+        "acceptedAnswer":{"@type":"Answer","text":"Conform comunicărilor publice: 25.02.2026 – 26.08.2026 (verificați întotdeauna versiunea curentă a ghidului pe site-ul oficial)."}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#e7eefc;
+      --muted:#9fb0d0;
+      --accent:#22c55e;
+      --accent2:#38bdf8;
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 10px 28px rgba(0,0,0,.32);
+      --radius:16px;
+
+      --pad: clamp(16px, 3.2vw, 28px);
+      --h1: clamp(26px, 4.6vw, 40px);
+      --h2: clamp(18px, 2.8vw, 24px);
+      --h3: 16px;
+      --p:  clamp(15px, 2.2vw, 16px);
+
+      --stickyH: 64px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 18% -10%, rgba(34,197,94,.25), transparent 60%),
+        radial-gradient(900px 500px at 85% 0%, rgba(56,189,248,.20), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      font-size: var(--p);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding-bottom: calc(var(--stickyH) + env(safe-area-inset-bottom));
+    }
+
+    a{color:inherit}
+    .wrap{max-width:1100px; margin:0 auto; padding: 18px var(--pad) 84px}
+    .muted{color:var(--muted)}
+    .hint{font-size:12px; color:var(--muted); margin-top:8px}
+    .hr{height:1px; background:var(--border); margin:14px 0}
+
+    /* Skip link */
+    .skip{
+      position:absolute; left:-999px; top:10px;
+      background:#000; color:#fff; padding:10px 12px;
+      border-radius:10px; z-index:9999;
+    }
+    .skip:focus{left:14px}
+
+    header.nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 0 18px;
+      flex-wrap:wrap;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:950; letter-spacing:.2px}
+    .dot{
+      width:12px;height:12px;border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(34,197,94,.15)
+    }
+
+    .navlinks{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      border-radius:999px;
+      text-decoration:none;
+      opacity:.95;
+      font-weight:850;
+    }
+    .pill:active{transform:translateY(1px)}
+    section{scroll-margin-top: 12px;}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    /* Hero */
+    .hero{padding: var(--pad)}
+    .kicker{
+      display:flex; gap:10px; align-items:center;
+      color:var(--muted); font-weight:750; font-size:14px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      padding:6px 10px; border-radius:999px;
+      background:rgba(34,197,94,.16);
+      border:1px solid rgba(34,197,94,.36);
+      color:#b7f7cc; font-weight:950;
+    }
+    h1{margin:12px 0 10px; font-size: var(--h1); line-height:1.12}
+    h2{margin:0 0 10px; font-size: var(--h2); line-height:1.2}
+    h3{margin:0 0 8px; font-size: var(--h3)}
+    .sub{color:var(--muted); margin:0 0 14px}
+
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      border:0; cursor:pointer; text-decoration:none;
+      border-radius:12px; padding:12px 14px;
+      font-weight:950;
+      min-height:44px;
+      user-select:none;
+      transition: transform .05s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btnPrimary{
+      background:linear-gradient(90deg, var(--accent), #16a34a);
+      color:#06101b;
+    }
+    .btnGhost{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+    .btnSecondary{
+      background:rgba(56,189,248,.12);
+      border:1px solid rgba(56,189,248,.35);
+      color:#cfefff;
+    }
+
+    /* Layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap:12px;
+      margin-top:14px;
+    }
+    .section{margin-top:18px}
+    .sectionCard{padding: var(--pad)}
+    .twoCol{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+
+    .mini{
+      padding:16px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.12);
+    }
+    .mini ul{margin:0; padding:0 0 0 18px; color:var(--muted)}
+    .mini li{margin:6px 0}
+
+    /* TOC */
+    .toc a{display:block; text-decoration:none; padding:10px 12px; border-radius:12px}
+    .toc a:hover{background:rgba(255,255,255,.05)}
+    .toc .muted{font-size:13px}
+
+    /* FAQ */
+    details{
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.10);
+      border-radius:14px;
+      padding:12px 14px;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color:var(--muted)}
+
+    /* Callouts */
+    .callout{
+      border:1px solid rgba(56,189,248,.35);
+      background:rgba(56,189,248,.10);
+      border-radius:14px;
+      padding:14px;
+    }
+    .callout b{display:block}
+    .danger{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      border-radius:14px;
+      padding:14px;
+    }
+
+    /* Focus */
+    a:focus-visible, button:focus-visible, summary:focus-visible{
+      outline:3px solid rgba(56,189,248,.55);
+      outline-offset:2px;
+      border-radius:12px;
+    }
+
+    /* Sticky mobile CTA */
+    .stickyCta{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:10px var(--pad);
+      padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      background:rgba(11,18,32,.78);
+      backdrop-filter: blur(8px);
+      border-top:1px solid var(--border);
+      display:none;
+      z-index:999;
+    }
+    .stickyCta .inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .stickyCta .txt{color:var(--muted); font-weight:850; font-size:13px}
+    .stickyCta .btn{flex:1; min-width: 160px}
+
+    .foot{
+      margin-top:26px;
+      padding:14px 0 0;
+      color:rgba(255,255,255,.58);
+      font-size:12px;
+      border-top:1px solid var(--border);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    @media (max-width: 940px){
+      .grid{grid-template-columns:1fr}
+      .twoCol{grid-template-columns:1fr}
+      .stickyCta{display:block}
+      .btn{white-space:normal}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .btn{transition:none}
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Sari la conținut</a>
+
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        ElectroVerde <span style="opacity:.68;font-weight:850">| Detalii apel PTJ</span>
+      </div>
+      <nav class="navlinks" aria-label="Navigație">
+        <a class="pill" href="/ptj/">Înapoi la landing</a>
+        <a class="pill" href="#oficial">Linkuri oficiale</a>
+        <a class="pill" href="#eligibilitate">Eligibilitate</a>
+        <a class="pill" href="#pasi">Pași recomandați</a>
+        <a class="pill" href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <!-- HERO -->
+      <section class="card hero" aria-label="Introducere">
+        <div class="kicker">
+          <span class="badge">UAT • PTJ 2026</span>
+          <span>Ghid practic (pe înțeles) + trimiteri oficiale</span>
+        </div>
+
+        <h1>Apel PTJ: Energie verde + stocare (în perspectiva comunităților de energie)</h1>
+        <p class="sub">
+          Pagina aceasta sintetizează pe scurt condițiile și pașii practici pentru UAT.
+          <b>Sursa de adevăr rămâne ghidul oficial</b> (linkuri mai jos). Pentru implementare, UAT-ul depune proiectul, iar execuția se contractează ulterior prin proceduri legale.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="/ptj/#contact">Cere REA (Rapid Energy Assessment)</a>
+          <a class="btn btnGhost" href="/ptj/#downloads">Descarcă PDF-urile ElectroVerde</a>
+          <a class="btn btnSecondary" href="#oficial">Vezi linkurile oficiale</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="twoCol">
+          <div class="mini">
+            <h3>Pe scurt (ce contează în 30 sec)</h3>
+            <ul>
+              <li>Solicitant: <b>UAT</b> eligibil</li>
+              <li>Investiții: <b>producție SRE pentru autoconsum</b> + <b>stocare</b> (electric/termic)</li>
+              <li>Zone: <b>Gorj, Hunedoara, Valea Jiului, Dolj, Galați, Prahova, Mureș</b></li>
+              <li>Depunere: <b>25.02.2026 – 26.08.2026</b> (verifică mereu ultima versiune)</li>
+            </ul>
+            <div class="hint">Ultima actualizare pagină: <b>09.01.2026</b></div>
+          </div>
+
+          <div class="danger">
+            <h3>Important (audit-safe)</h3>
+            <div class="muted">
+              • ElectroVerde nu este solicitant (beneficiar) în apel – UAT depune.<br/>
+              • Nu “aranjăm” caiete de sarcini; oferim doar <b>note tehnice generale</b> și <b>evaluări orientative</b> (REA).<br/>
+              • Condițiile exacte (eligibilitate/cheltuieli/limite) sunt cele din ghidul oficial.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN GRID -->
+      <section class="grid section" aria-label="Conținut și cuprins">
+        <!-- Left: Content -->
+        <div>
+          <section class="card sectionCard section" id="oficial" aria-label="Linkuri oficiale">
+            <h2>Linkuri oficiale (sursa de adevăr)</h2>
+            <p class="muted" style="margin:0 0 12px">
+              Recomandăm să salvați linkurile de mai jos și să verificați periodic actualizările.
+            </p>
+
+            <div class="callout">
+              <b>Ghid / pagină oficială MIPE / AM PTJ</b>
+              <div class="muted" style="margin-top:6px">
+                • Pagină ghiduri PTJ: <a href="https://mfe.gov.ro/ghiduri_ptj/" target="_blank" rel="noopener">mfe.gov.ro/ghiduri_ptj</a><br/>
+                • Pagina dedicată ghidului (dacă este disponibilă): <a href="https://mfe.gov.ro/ghiduri_ptj/ghidului-solicitantului-pentru-actiunea-energie-verde-accesibila-si-mobilitate-nepoluanta-componenta-dezvoltarea-surselor-de-energie-regenerabila-in-perspectiva-crearii/" target="_blank" rel="noopener">link MIPE</a>
+              </div>
+              <div class="hint">Dacă linkul de mai sus se încarcă greu uneori, folosiți pagina „ghiduri PTJ” ca intrare.</div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="mini">
+              <h3>Comunicat / postare publică (rezumat date)</h3>
+              <div class="muted">
+                Postare publică MIPE: <a href="https://www.facebook.com/MinisterulInvestitiilorsiProiectelorEuropene/" target="_blank" rel="noopener">Ministerul Investițiilor și Proiectelor Europene</a>
+              </div>
+              <div class="hint">
+                În practică, pentru depunere și condiții contează ghidul + anexele aferente (versiunea curentă).
+              </div>
+            </div>
+          </section>
+
+          <section class="card sectionCard section" id="eligibilitate" aria-label="Eligibilitate și acoperire">
+            <h2>Eligibilitate & acoperire</h2>
+
+            <div class="twoCol">
+              <div class="mini">
+                <h3>Cine depune</h3>
+                <div class="muted">
+                  • <b>UAT</b> (autorități publice locale) din zonele eligibile.<br/>
+                  • Punct de atenție: pot exista reguli privind numărul de cereri per solicitant / per apel (verificați ghidul și platforma oficială).
+                </div>
+              </div>
+
+              <div class="mini">
+                <h3>Zone eligibile în apel</h3>
+                <div class="muted">
+                  <b>Gorj</b> • <b>Hunedoara</b> • <b>Valea Jiului</b> (ITI) • <b>Dolj</b> • <b>Galați</b> • <b>Prahova</b> • <b>Mureș</b>
+                </div>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="mini">
+              <h3>Ce se finanțează (în termeni practici)</h3>
+              <div class="muted">
+                • Echipamente și activități pentru <b>capacități de producere energie</b> (electrică sau termică) din surse regenerabile pentru <b>autoconsum</b> (ex: fotovoltaic, eolian, alte SRE).<br/>
+                • <b>Capacități de stocare</b> asociate investițiilor, pentru creșterea consumului propriu și flexibilitate.<br/>
+                • Proiecte pentru <b>clădiri publice</b> și (în logica comunităților de energie) pot exista mecanisme de implicare a gospodăriilor, conform ghidului.
+              </div>
+              <div class="hint">
+                Formulările exacte (și lista completă de cheltuieli eligibile) sunt în ghid + anexele aferente.
+              </div>
+            </div>
+          </section>
+
+          <section class="card sectionCard section" id="gospodarii" aria-label="Gospodării și comunități de energie">
+            <h2>Gospodării & comunități de energie (pe scurt)</h2>
+            <div class="muted">
+              În comunicările publice, gospodăriile interesate de a face parte din viitoarea comunitate de energie la nivel UAT:
+              își exprimă intenția de a respecta cerințele investiției, iar UAT realizează o <b>listă de angajament</b>,
+              selectată printr-o procedură transparentă și deschisă, publicată pe canalele oficiale ale UAT.
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="twoCol">
+              <div class="mini">
+                <h3>Ce e bine să fie “beton”</h3>
+                <ul>
+                  <li>Anunț public clar (criterii, termen, modul de depunere)</li>
+                  <li>Listă angajament trasabilă (data, semnături, format)</li>
+                  <li>Reguli anti-conflict de interese & transparență</li>
+                  <li>Dovadă publicare pe canale oficiale</li>
+                </ul>
+              </div>
+              <div class="mini">
+                <h3>Ce evită riscurile la audit</h3>
+                <ul>
+                  <li>“Selecție pe WhatsApp” / fără anunț public</li>
+                  <li>Criterii schimbate după depuneri</li>
+                  <li>Lipsa dovezilor (capturi, linkuri, registru)</li>
+                  <li>Angajamente fără date minime (adresă, CNP etc.)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="card sectionCard section" id="timeline" aria-label="Calendar și repere">
+            <h2>Calendar & repere (orientativ)</h2>
+            <div class="twoCol">
+              <div class="mini">
+                <h3>Depunere</h3>
+                <div class="muted">
+                  Interval comunicat public: <b>25.02.2026 – 26.08.2026</b>.<br/>
+                  Verificați mereu eventuale clarificări / versiuni actualizate înainte de depunere.
+                </div>
+              </div>
+              <div class="mini">
+                <h3>După depunere</h3>
+                <div class="muted">
+                  Evaluare → contractare → achiziție → implementare → recepție → raportare, conform regulilor programului.
+                </div>
+              </div>
+            </div>
+
+            <div class="callout" style="margin-top:12px">
+              <b>Recomandare practică</b>
+              <div class="muted" style="margin-top:6px">
+                Nu așteptați “ultima lună”. Începeți cu REA + colectarea datelor (consum, acoperiș, acces, racordare) și pregătirea procedurală (hotărâri, anunțuri, listă angajament), ca să reduceți riscul de blocaj.
+              </div>
+            </div>
+          </section>
+
+          <section class="card sectionCard section" id="pasi" aria-label="Pași recomandați pentru UAT">
+            <h2>Pași recomandați (workflow “curat”)</h2>
+
+            <div class="twoCol">
+              <div class="mini">
+                <h3>1) Pregătire internă</h3>
+                <div class="muted">
+                  Identificați clădirile (minim 2–3), un owner (admin public / tehnic) și datele de consum.
+                </div>
+              </div>
+              <div class="mini">
+                <h3>2) REA (Rapid Energy Assessment)</h3>
+                <div class="muted">
+                  2 scenarii + buget orientativ + timeline + riscuri. Vă ajută să decideți realist “ce merită depus”.
+                </div>
+              </div>
+              <div class="mini">
+                <h3>3) Documente & clarificări</h3>
+                <div class="muted">
+                  Pregătiți documentele cerute de ghid + clarificați riscurile (acoperiș/racordare/acces).
+                </div>
+              </div>
+              <div class="mini">
+                <h3>4) Depunere + achiziție</h3>
+                <div class="muted">
+                  Depunerea e la UAT. Implementarea se face ulterior prin procedura legală de achiziție.
+                </div>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="mini">
+              <h3>Ce vă cere ElectroVerde ca să facă REA (minim)</h3>
+              <div class="muted">
+                • 2–3 clădiri (denumire + adresă)<br/>
+                • consum (ideal 12 luni) sau estimare<br/>
+                • 6–10 poze acoperiș + poze tablouri/contor (dacă se poate)<br/>
+                • persoană de contact + interval de acces
+              </div>
+              <div class="ctaRow">
+                <a class="btn btnPrimary" href="/ptj/#contact">Cere REA (formular)</a>
+                <a class="btn btnGhost" href="/ptj/#downloads">Descarcă Checklist REA</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="card sectionCard section" id="faq" aria-label="FAQ">
+            <h2>FAQ (întrebări frecvente)</h2>
+
+            <details>
+              <summary>ElectroVerde poate depune proiectul?</summary>
+              <p>Nu. Solicitantul este UAT-ul. ElectroVerde poate sprijini tehnic (REA / note generale) și poate implementa ulterior ca executant selectat prin procedură.</p>
+            </details>
+
+            <details>
+              <summary>Se poate face proiect doar pe clădiri publice?</summary>
+              <p>În practică, investițiile se pot concentra pe clădiri publice pentru autoconsum, iar componenta de comunități poate implica și gospodării prin mecanismele descrise în ghid (ex: listă angajament). Verificați condițiile exacte.</p>
+            </details>
+
+            <details>
+              <summary>Este obligatorie stocarea?</summary>
+              <p>Depinde de condițiile ghidului și de proiect. Noi o tratăm “ingineresc”: o dimensionăm doar dacă are sens pe profilul de consum și obiectiv (autoconsum/reziliență/optimizare).</p>
+            </details>
+
+            <details>
+              <summary>Putem depune mai multe cereri?</summary>
+              <p>Pot exista limitări privind numărul de cereri per solicitant / per apel (ex: “un solicitant poate depune o singură cerere” – verificați ghidul și platforma oficială). Nu mizați pe presupuneri.</p>
+            </details>
+
+            <details>
+              <summary>Ce înseamnă “audit-friendly”?</summary>
+              <p>Livrabile clare, trasabile (testări, punere în funcțiune, manuale), transparență în proceduri și asumări realiste (fără promisiuni vagi).</p>
+            </details>
+          </section>
+
+          <section class="card sectionCard section" id="disclaimer" aria-label="Disclaimer">
+            <h2>Disclaimer (important)</h2>
+            <div class="muted">
+              Această pagină este informativă și orientativă. Condițiile finale (eligibilitate, cheltuieli, praguri/limite, proceduri) sunt cele din documentele oficiale
+              publicate de Autoritatea de Management / MIPE (versiunea curentă la data depunerii).
+            </div>
+          </section>
+        </div>
+
+        <!-- Right: TOC / quick actions -->
+        <aside class="card sectionCard toc" aria-label="Cuprins">
+          <h2 style="margin-bottom:6px">Cuprins</h2>
+          <div class="muted" style="margin:0 0 10px">
+            Navighează rapid (mobile-friendly).
+          </div>
+
+          <a href="#oficial">Linkuri oficiale</a>
+          <a href="#eligibilitate">Eligibilitate & acoperire</a>
+          <a href="#gospodarii">Gospodării & comunități</a>
+          <a href="#timeline">Calendar & repere</a>
+          <a href="#pasi">Pași recomandați</a>
+          <a href="#faq">FAQ</a>
+          <a href="#disclaimer">Disclaimer</a>
+
+          <div class="hr"></div>
+
+          <div class="mini">
+            <h3>Acțiune rapidă</h3>
+            <div class="muted">
+              Pentru UAT-uri: începeți cu REA (5 zile) ca să aveți scenarii și buget orientativ.
+            </div>
+            <div class="ctaRow" style="margin-top:10px">
+              <a class="btn btnPrimary" href="/ptj/#contact">Cere REA</a>
+              <a class="btn btnGhost" href="/ptj/#downloads">PDF</a>
+            </div>
+          </div>
+
+          <div class="hint">
+            Focus operațional ElectroVerde: Prahova → apoi Galați/Dolj (în funcție de capacitate).
+          </div>
+        </aside>
+      </section>
+
+      <div class="foot">
+        <div>© ElectroVerde • PTJ hub • 2026</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/politica-de-confidentialitate/">Politica de confidențialitate</a>
+          <span style="opacity:.5">•</span>
+          <a href="/cookies/">Cookies</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Sticky CTA for mobile -->
+  <div class="stickyCta" aria-hidden="false">
+    <div class="inner">
+      <div class="txt">Detalii apel + pași • REA în 5 zile</div>
+      <a class="btn btnPrimary" href="/ptj/#contact">Cere REA</a>
+      <a class="btn btnGhost" href="/ptj/">Landing</a>
+    </div>
+  </div>
+</body>
+</html>
